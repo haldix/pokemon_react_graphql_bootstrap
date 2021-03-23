@@ -3,8 +3,8 @@ import Pokemons from '../components/Pokemons';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div classNameName='home'>
+      <h1 className='text-center mt-3'>POKEMON</h1>
       <Pokemons />
     </div>
   );

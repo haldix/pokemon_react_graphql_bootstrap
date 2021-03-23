@@ -6,22 +6,6 @@ export const getAllPokemons = gql`
       id
       name
       image
-      weight {
-        minimum
-        maximum
-      }
-      height {
-        minimum
-        maximum
-      }
-      maxHP
-      maxCP
-      attacks {
-        special {
-          name
-          damage
-        }
-      }
     }
   }
 `;

@@ -9,6 +9,8 @@ import {
 import { onError } from '@apollo/client/link/error';
 import Home from './pages/Home';
 import Details from './pages/Details';
+import About from './pages/About';
+import Navbar from './components/Navbar';
 
 // Log any GraphQL errors or network error that occurred
 const errorLink = onError(({ graphQLErrors, networkError }) => {
@@ -35,8 +37,10 @@ function App() {
   return (
     <Router>
       <ApolloProvider client={client}>
+        <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
           <Route path='/pokemon/:id' component={Details} />
           <Route render={() => <h1>Error - Route Not Found</h1>} />
         </Switch>
